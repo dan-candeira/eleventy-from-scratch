@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "About",
+      "url": "/about-us/"
+    },
+    {
+      "text": "Work",
+      "url": "/work/"
+    },
+    {
+      "text": "Blog",
+      "url": "https://piccalil.li/blog/"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/"
+    }
+  ]
+}
