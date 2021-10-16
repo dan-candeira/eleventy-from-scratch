@@ -16,6 +16,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Return a collection of blog posts in reverse date order
+  eleventyConfig.addCollection('blog', (collection) => {
+    return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+  });
+
   return {
     // defining templating language
     markdownTemplateEngine: 'njk',

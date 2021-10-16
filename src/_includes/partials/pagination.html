@@ -1,0 +1,21 @@
+{# only renders this section if there are links to render #}
+<!-- prettier-ignore -->
+{% if pagination.href.next or pagination.href.previous %}
+<footer class="[ pagination ] [ dot-shadow panel ] [ bg-light-glare font-sans weight-bold ]">
+  <div class="wrapper">
+    <nav class="pagination__inner" aria-label="Pagination links">
+      {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}{{ paginationAchor }}" data-direction="backwards">
+        <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+      </a>
+      {% endif %}
+      <!-- prettier-ignore -->
+      {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+        <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+      </a>
+      {% endif %}
+    </nav>
+  </div>
+</footer>
+{% endif %}
