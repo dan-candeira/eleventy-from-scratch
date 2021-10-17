@@ -23,6 +23,13 @@ module.exports = function (eleventyConfig) {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
 
+  // Return a list of people ordered by filename
+  eleventyConfig.addCollection('people', (collection) => {
+    return collection.getFilteredByGlob('./src/people/*.md').sort((a, b) => {
+      return Number(a.slugFile) > Number(b.slugFile) ? 1 : -1;
+    });
+  });
+
   // Filters
   eleventyConfig.addFilter('dateFilter', dateFilter);
   eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
