@@ -2,13 +2,12 @@ const Cache = require('@11ty/eleventy-cache-assets');
 
 module.exports = async () => {
   try {
-    // prettier-ignore
-    const {items} = await Cache(
+    const { items } = await Cache(
       'https://11ty-from-scratch-content-feeds.piccalil.li/media.json',
       {
         duration: '1d',
-        type: 'json'
-      }
+        type: 'json',
+      },
     );
     return items;
   } catch (ex) {

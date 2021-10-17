@@ -1,5 +1,5 @@
 {% extends "layouts/base.html" %}
-<!-- prettier-ignore -->
+
 {% set pageHeaderTitle = title %}
 {% set pageHeaderSummary = content %}
 {% set postListItems = pagination.items %}
@@ -11,18 +11,16 @@
 {% endif %}
 
 {% block content %}
-<!-- prettier-ignore -->
-<article>
-  {% include "partials/page-header.html" %} 
-  {% include "partials/post-list.html" %}
+  <article>
+    {% include "partials/page-header.html" %}
+    {% include "partials/post-list.html" %}
 
-  {# If we leave pagination in for tags, the next and prev links will
+    {# If we leave pagination in for tags, the next and prev links will
     link to tags and be rather confusing, so don't render in that situation  #}
     {% if not tag %}
       {% include "partials/pagination.html" %}
     {% endif %}
-</article>
+  </article>
 
-{% include "partials/cta.html" %}
-<!-- prettier-ignore -->
+  {% include "partials/cta.html" %}
 {% endblock %}

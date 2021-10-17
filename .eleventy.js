@@ -1,4 +1,6 @@
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
+const dateFilter = require('./src/filters/date-filter.js');
+const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
 module.exports = function (eleventyConfig) {
   // Set directories to pass through to the dist folder
@@ -20,6 +22,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('blog', (collection) => {
     return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
+
+  // Filters
+  eleventyConfig.addFilter('dateFilter', dateFilter);
+  eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
 
   return {
     // defining templating language

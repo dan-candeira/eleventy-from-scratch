@@ -8,25 +8,24 @@
         >
           {{ featuredWork.title }}
         </h2>
-        <!-- prettier-ignore -->
         <p class="[ featured-work__summary ] [ measure-compact ]">
           {{ featuredWork.summary }}
         </p>
       </div>
       {% for item in collections.featuredWork %}
-      <a
+        <a
         href="{{ item.url }}"
         aria-label="See {{ item.data.title }}"
         class="[ featured-work__item ] [ frame ]"
         data-frame="quaternary"
       >
-        <img
+          <img
           src="{{ item.data.hero.image }}"
           alt="{{ item.data.hero.imageAlt }}"
           loading="lazy"
           class="radius"
-        />
-      </a>
+/>
+        </a>
       {% endfor %}
     </div>
     <div class="[ featured-work__action ] [ flow-space-700 ]">
