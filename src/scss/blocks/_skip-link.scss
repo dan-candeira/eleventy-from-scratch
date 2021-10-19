@@ -1,0 +1,10 @@
+.skip-link {
+  position: absolute;
+  top: get-size('400');
+  left: get-size('400');
+
+  // @exteds should be used with care, but this is a great example of them being hella useful
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}
