@@ -9,6 +9,9 @@ module.exports = function (eleventyConfig) {
   // Set directories to pass through to the dist folder
   eleventyConfig.addPassthroughCopy('./src/images');
 
+  // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+  eleventyConfig.setUseGitIgnore(false);
+
   // Plugins
   eleventyConfig.addPlugin(rssPlugin);
 
