@@ -13,8 +13,11 @@
           <h2 
             class="[ headline ] [ measure-micro color-quinary ]"
             data-highlight="dark">
-            Meet the team
+            {# Find better way to strip the unecessary 
+              white spaces before and after #}
+            {{- 'Meet the team' -}}
           </h2>
+          {% include "partials/people.html" %}
         </div>
       </div>
     {% endif %}
