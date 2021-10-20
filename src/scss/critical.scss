@@ -81,6 +81,8 @@ h4 {
 @import 'blocks/studio-feed';
 @import 'blocks/page-header';
 @import 'blocks/pagination';
+@import 'blocks/people';
+@import 'blocks/person';
 
 // Import utilities
 @import 'utilities/flow';
@@ -89,3 +91,5 @@ h4 {
 @import 'utilities/radius';
 @import 'utilities/headline';
 @import 'utilities/panel';
+@import 'utilities/auto-grid';
+@import 'utilities/frame';
