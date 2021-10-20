@@ -5,9 +5,17 @@ const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
+// Transform
+const htmlMinTransform = require('./src/transforms/html-min-transform.js');
+
+// Create a helpful production flag
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = function (eleventyConfig) {
-  // Set directories to pass through to the dist folder
-  eleventyConfig.addPassthroughCopy('src/images');
+  // Only minify HTML if we are in production because it slows builds _right_ down
+  if (isProduction) {
+    eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+  }
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);

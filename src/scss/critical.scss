@@ -70,6 +70,11 @@ h4 {
   border-radius: 0.25rem;
 }
 
+.site-wrap {
+  overflow-x: hidden;
+  position: relative;
+}
+
 // Import blocks
 @import 'blocks/site-foot';
 @import 'blocks/site-head';
@@ -79,6 +84,7 @@ h4 {
 @import 'blocks/cta';
 @import 'blocks/featured-work';
 @import 'blocks/studio-feed';
+@import 'blocks/post-list';
 @import 'blocks/page-header';
 @import 'blocks/pagination';
 @import 'blocks/people';
@@ -94,3 +100,4 @@ h4 {
 @import 'utilities/panel';
 @import 'utilities/auto-grid';
 @import 'utilities/frame';
+@import 'utilities/dot-shadow';
